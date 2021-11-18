@@ -23,8 +23,9 @@ public class LoggingAspect {
 
 
 
-    @Pointcut("within(sliu.mapper..*) || within(sliu.service..*) || within(sliu*.web.rest..*)")
+    @Pointcut("within(sliu.mapper..*) || within(sliu.service..*) || within(sliu.web.rest..*)")
     public void loggingPointcut() {
+        System.out.println("进入日志aop");
     }
 
     /**

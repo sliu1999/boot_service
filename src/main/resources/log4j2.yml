@@ -12,7 +12,7 @@ Configuration:
       - name: log.path
         value: /opt/logs
       - name: project.name
-        value: user-manage
+        value: boot_service
     
   Appenders:
     Console:  #输出到控制台
@@ -45,7 +45,7 @@ Configuration:
         - ref: ROLLING_FILE
 
     Logger: # 为com.xjj包配置特殊的Log级别，方便调试
-      - name: com.cxtx.user_manage.mapper
+      - name: sliu.mapper
         additivity: true
         level: ${log.level.mapper}
 
