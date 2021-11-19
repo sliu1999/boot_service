@@ -1,6 +1,6 @@
 <simsSpringBoot>
-    <basePackage>com.cxtx.user_manage</basePackage>
-    <entityName>OaFormFile</entityName>
+    <basePackage>sliu</basePackage>
+    <entityName>ParkFloor</entityName>
     <entityPackageName>domain</entityPackageName>
     <resourcePackageName>web.rest</resourcePackageName>
     <serviceImplPackageName>service.impl</serviceImplPackageName>

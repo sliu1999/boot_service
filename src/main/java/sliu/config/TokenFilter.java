@@ -44,7 +44,9 @@ public class TokenFilter implements Filter {
         HttpServletRequest httpServletRequest = (HttpServletRequest)request;
         String url = httpServletRequest.getRequestURI();
         boolean isFilter = false;
-        if (url.indexOf("/api/login") >= 0 || url.indexOf("/api/getCode") >= 0) {
+        if (url.indexOf("/api/login") >= 0 || url.indexOf("/api/getCode") >= 0
+                || url.indexOf("/v2") >= 0  || url.indexOf("/swagger-resources") >= 0 || url.indexOf("/js") >= 0
+                || url.indexOf("/doc.html") >= 0 || url.indexOf("/css") >= 0) {
             //白名单放行，登录，获取验证码
             chain.doFilter(request, response);
         }else {

@@ -102,9 +102,14 @@
         <dependency>
             <groupId>com.github.xiaoymin</groupId>
             <artifactId>knife4j-spring-boot-starter</artifactId>
-            <version>2.0.5</version>
+            <version>2.0.9</version>
         </dependency>
         <!--end-->
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>20.0</version>
+        </dependency>
         <dependency>
             <groupId>org.apache.commons</groupId>
             <artifactId>commons-lang3</artifactId>
@@ -200,14 +205,9 @@
 
             <!--自动生成controller,interface,实现类的逆向工程-->
             <plugin>
-                <groupId>com.handsmap.plugins</groupId>
+                <groupId>com.handsmap.plugin</groupId>
                 <artifactId>spring-boot-sims-generator-maven-plugin</artifactId>
                 <version>0.0.6-SNAPSHOT</version>
-            </plugin>
-            <plugin>
-                <groupId>com.handsmap.plugins</groupId>
-                <artifactId>sims-deploy-maven-plugin</artifactId>
-                <version>1.5-SNAPSHOT</version>
             </plugin>
             <!--end-->
         </plugins>
