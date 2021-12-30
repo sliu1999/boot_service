@@ -146,6 +146,13 @@
         </dependency>
         <!--end-->
 
+        <!--spring boot nacos config-->
+        <dependency>
+            <groupId>com.alibaba.boot</groupId>
+            <artifactId>nacos-config-spring-boot-starter</artifactId>
+            <version>0.2.1</version>
+        </dependency>
+
     </dependencies>
 
     <!--锁定版本-->
@@ -205,7 +212,7 @@
 
             <!--自动生成controller,interface,实现类的逆向工程-->
             <plugin>
-                <groupId>com.handsmap.plugin</groupId>
+                <groupId>com.handsmap.plugins</groupId>
                 <artifactId>spring-boot-sims-generator-maven-plugin</artifactId>
                 <version>0.0.6-SNAPSHOT</version>
             </plugin>

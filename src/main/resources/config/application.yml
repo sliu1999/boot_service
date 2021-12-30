@@ -7,7 +7,7 @@ spring:
   application:
     name: boot_service
   redis:
-    host: 47.117.128.180
+    host: 192.168.1.17
     password: 123456
     port: 6379
   datasource:
@@ -20,10 +20,10 @@ mybatis:
   mapper-locations: classpath*:config/mybatis/mappers/mysql/**/*.xml
   config-location: classpath:config/mybatis/config/mysql/mybatis-config.xml
 
-#knife4j:
-#  enable: true
-#  setting:
-#    enableDocumentManage: true
+nacos:
+  config:
+    server-addr: 192.168.1.15:8848
+
 #http://localhost:8087/bootservice/doc.html#/home
 
 upload-path: C:/root/cxtx/image
