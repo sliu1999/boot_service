@@ -1,0 +1,62 @@
+
+spring:
+  profiles: test
+  redis:
+    host: 192.168.1.17
+    password: 123456
+    port: 6379
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    url: jdbc:mysql://47.117.128.180:3306/user_manage?useUnicode=true&characterEncoding=utf8&useSSL=false
+    username: usermanage
+    password: 12345678
+  boot:
+    admin:
+      client:
+        url: http://localhost:9100
+        username: root #spring admin server用户名
+        password: root #spring admin server密码
+        instance:
+          service-base-url: http://localhost:8087
+#spring boot admin配置
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  endpoint:
+    health:
+      show-details: ALWAYS
+    logfile:
+      enabled: true
+
+
+nacos:
+  config:
+    server-addr: 192.168.1.15:8848
+
+logging:
+  config: classpath:logback-spring.xml
+  file:
+    #spring boot admin 要读取的日志文件位置
+    name: /opt/test/logs/boot-service.log
+    path: /opt/test/logs
+
+#http://localhost:8087/bootservice/doc.html#/home
+
+upload-path: C:/root/cxtx/image
+
+
+#knife4j:
+#  enable: true
+#  # 开启Swagger的Basic认证功能,默认是false
+#  basic:
+#    enable: true
+#    # Basic认证用户名
+#    username: ejycxtx
+#    # Basic认证密码
+#    password: ejycxtx123456.
+#  setting:
+#    enableDocumentManage: true
+
+

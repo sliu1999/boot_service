@@ -44,9 +44,13 @@ public class TokenFilter implements Filter {
         HttpServletRequest httpServletRequest = (HttpServletRequest)request;
         String url = httpServletRequest.getRequestURI();
         boolean isFilter = false;
+        //登录，获取验证吗
         if (url.indexOf("/api/login") >= 0 || url.indexOf("/api/getCode") >= 0
+                //swagger文档
                 || url.indexOf("/v2") >= 0  || url.indexOf("/swagger-resources") >= 0 || url.indexOf("/js") >= 0
-                || url.indexOf("/doc.html") >= 0 || url.indexOf("/css") >= 0) {
+                || url.indexOf("/doc.html") >= 0 || url.indexOf("/css") >= 0
+                //spring boot admin监控
+                || url.indexOf("/actuator") >= 0) {
             //白名单放行，登录，获取验证码
             chain.doFilter(request, response);
         }else {
